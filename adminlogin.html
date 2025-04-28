@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css rel='stylesheet'>
+</head>
+<body style="background-image: url(../img/112.jpg);">
+    <div class="wrapper">
+        <form>
+            <h1>Login</h1>
+            <div class="inputbox">
+                <input type="text" placeholder="Username" required>
+                <i class="fa-solid fa-user" ></i>
+                
+            </div>
+
+            <div class="inputbox">
+                <input type="password" placeholder="Password" id="myInput">
+                    <input type="password" onclick="myFunction()">
+                    <i class="fa-solid fa-lock" id="lock" aria-hidden="true" ></i>
+            </div>
+
+            <div class="remember-forget">
+               <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember Me </label>
+               </div>
+                <a href="adhaarno.html">Forget Password</a>
+               </div>
+
+            <a href="admin_dashboard.html"><button type="submit" class="btn">Login</button></a>
+
+            
+           
+        </form>
+    </div>
+
+    <script>
+
+        
+        document.getElementById("lock").addEventListener("click",function() {
+          var x = document.getElementById("myInput");
+          if (x.type == "password") {
+            x.type = "text";
+            this.classList.add("fa-lock-open");
+            this.classList.remove("fa-lock");
+            
+          } else {
+            x.type = "password";
+            this.classList.remove("fa-lock-open");
+            this.classList.add("fa-lock");
+          }
+        });
+        </script>
+</body>
+</html> 
